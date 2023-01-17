@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker学习笔记 | 老麦的日常</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="记录学习日常">
+    <meta name="theme-color" content="#1e80ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.a528d36a.css" as="style"><link rel="preload" href="/assets/js/app.ab260301.js" as="script"><link rel="preload" href="/assets/js/2.6430ac10.js" as="script"><link rel="preload" href="/assets/js/11.1c9d0aac.js" as="script"><link rel="prefetch" href="/assets/js/10.7dfd46d0.js"><link rel="prefetch" href="/assets/js/12.3c3d4265.js"><link rel="prefetch" href="/assets/js/13.155f9790.js"><link rel="prefetch" href="/assets/js/14.151ae722.js"><link rel="prefetch" href="/assets/js/15.363676a6.js"><link rel="prefetch" href="/assets/js/16.58044f52.js"><link rel="prefetch" href="/assets/js/17.b9e23688.js"><link rel="prefetch" href="/assets/js/18.59819c4c.js"><link rel="prefetch" href="/assets/js/19.1c83ce2d.js"><link rel="prefetch" href="/assets/js/20.df484dce.js"><link rel="prefetch" href="/assets/js/21.91b1c0f3.js"><link rel="prefetch" href="/assets/js/3.869cf45f.js"><link rel="prefetch" href="/assets/js/4.8501b49b.js"><link rel="prefetch" href="/assets/js/5.870fe497.js"><link rel="prefetch" href="/assets/js/6.aeb7dc84.js"><link rel="prefetch" href="/assets/js/7.d6c6fffe.js"><link rel="prefetch" href="/assets/js/8.2984a5ea.js"><link rel="prefetch" href="/assets/js/9.1c6234b6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a528d36a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">老麦的日常</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  👍 网站介绍
+</a></div><div class="nav-item"><a href="/code/" class="nav-link router-link-active">
+  💯 编程分享
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  ✍️ 生活感悟
+</a></div><div class="nav-item"><a href="/game/" class="nav-link">
+  🎮 游戏人生
+</a></div><div class="nav-item"><a href="/website/" class="nav-link">
+  📈 网站动态
+</a></div> <a href="https://github.com/FamousMai/FamousMai.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  👍 网站介绍
+</a></div><div class="nav-item"><a href="/code/" class="nav-link router-link-active">
+  💯 编程分享
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  ✍️ 生活感悟
+</a></div><div class="nav-item"><a href="/game/" class="nav-link">
+  🎮 游戏人生
+</a></div><div class="nav-item"><a href="/website/" class="nav-link">
+  📈 网站动态
+</a></div> <a href="https://github.com/FamousMai/FamousMai.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>编程分享</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/code/nodejs.html" class="sidebar-link">nodejs</a></li><li><a href="/code/go-vue-admin.html" class="sidebar-link">gin-vue-admin</a></li><li><a href="/code/php.html" class="sidebar-link">PHP</a></li><li><a href="/code/mac.html" class="sidebar-link">Mac常见问题处理</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/code/docker.html" aria-current="page" class="active sidebar-link">Docker学习笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code/docker.html#docker概述" class="sidebar-link">Docker概述</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#docker安装" class="sidebar-link">Docker安装</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#docker的常用命令" class="sidebar-link">Docker的常用命令</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#docker镜像" class="sidebar-link">Docker镜像</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#容器数据卷" class="sidebar-link">容器数据卷</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#dockerfile" class="sidebar-link">Dockerfile</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#docker网络原理" class="sidebar-link">Docker网络原理</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#idea整合docker" class="sidebar-link">IDEA整合Docker</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#docker-compose" class="sidebar-link">Docker Compose</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#docker-swarm" class="sidebar-link">Docker Swarm</a></li><li class="sidebar-sub-header"><a href="/code/docker.html#ci-cd-jenkins" class="sidebar-link">CI\CD Jenkins</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker学习笔记"><a href="#docker学习笔记" class="header-anchor">#</a> Docker学习笔记</h1> <blockquote><p>学前准备</p></blockquote> <ol><li>linux（必要）</li> <li></li></ol> <h2 id="docker概述"><a href="#docker概述" class="header-anchor">#</a> Docker概述</h2> <h3 id="docker为什么出现"><a href="#docker为什么出现" class="header-anchor">#</a> Docker为什么出现</h3> <p>一款产品：开发 上线 两套环境 ！ 应用环境，应用配置</p> <p>开发 --- 运维。问题：我在我的电脑上可以运行！版本更新，导致服务不可用！对于运维来说，考验就十分大</p> <p>环境配置是十分麻烦的，每一个机器都要部署环境（集群Redis、ES、Hadoop...）! 费时费力。</p> <p>发布一个项目（程序文件 + （Redis、MySql、ES、Hadoop）），项目能不能带上环境安装打包</p> <p>之前在服务器配置一个应用的环境 Redis、Mysql、ES、Hadoop 配置超麻烦，不能够跨平台</p> <p>Windows，最后发布到Linux！</p> <p>传统：开发go程序，部署运维来做！</p> <p>现在：开发打包部署上线，一套流程做完！</p> <p>java --- apk -- 发布（应用商店） --- 张三使用apk ---- 安装即可用！</p> <p>java --- jar（环境） --- 打包项目带上环境（镜像） ---- （Docker仓库：商店） ---- 下载我们发布的镜像 --- 直接运行即可！</p> <p>docker给以上的问题，提出了解决方案！</p> <p>Docker的思想就来自于集装箱！</p> <p>JRE -- 多个应用（端口冲突） -- 原来都是交叉的</p> <p>隔离：docker核心思想！打包装箱！每个箱子是互相隔离的</p> <p>水果 生化武器</p> <p>Docker 通过隔离机制，可以将服务器利用到极致！</p> <p>本质：所有的技术都是因为出现了一些问题，我们需要去解决，才去学习！</p> <h3 id="docker的历史"><a href="#docker的历史" class="header-anchor">#</a> Docker的历史</h3> <p>2010年，几个搞IT的年轻人，就在美国成立了一家公司<code>dotCloud</code></p> <p>做一些pass的云计算服务！LXC有关的容器技术！</p> <p><img src="https://raw.githubusercontent.com/FamousMai/images/master/imgs/202301171827382.png" alt="image-20230117182705585"></p> <p>他们将自己的技术 （容器化技术） 命名就是 Docker！</p> <p>Docker刚刚诞生的时候，没有引起行业注意！dotCloud，就活不下去！</p> <p><code>开源</code></p> <p>开放源代码！</p> <p>2013年，Docker开源！</p> <p>Docker 越来越多的人发现了docker的优点！火了，Docker每个月都会更新一个版本！</p> <p>2014年4月9日，Docker1.0发布</p> <p>Docker为什么这么火？十分的轻巧！</p> <p>在容器技术出来之前，我们都是使用虚拟机技术！</p> <p>虚拟机：在window中装一个Vmware，通过这个软件我们可以虚拟出来一台或多台电脑！笨重！</p> <p>虚拟机也是属于虚拟化技术，Docker 容器技术，也是一种 虚拟化技术！</p> <div class="language-shell extra-class"><pre class="language-shell"><code>vm: linux centos原生镜像（一个电脑！）隔离，需要开启多个虚拟机！几个G 几分钟
+docker：隔离，镜像（最核心的环境 4m + jdk + mysql） 十分的小巧，运行镜像就可以了！小巧！几个M  KB 秒级启动！
+</code></pre></div><p>到现在，所有开发人员都必须要会Docker！</p> <h3 id="聊聊docker-网址"><a href="#聊聊docker-网址" class="header-anchor">#</a> 聊聊docker（网址）</h3> <p>Docker 是基于Go语言开发的！开源项目！</p> <p>官网：https://www.docker.com</p> <p>文档地址：https://docs.docker.com</p> <p>仓库地址：https://hub.docker.com</p> <h3 id="docker能干嘛"><a href="#docker能干嘛" class="header-anchor">#</a> Docker能干嘛</h3> <h4 id="之前的虚拟机技术"><a href="#之前的虚拟机技术" class="header-anchor">#</a> 之前的虚拟机技术</h4> <p>![image-20230117123541741](/Users/mym/Library/Application Support/typora-user-images/image-20230117123541741.png)</p> <p>虚拟机技术缺点：</p> <ol><li>资源占用十分多</li> <li>冗余步骤多</li> <li>启动很慢！</li></ol> <h4 id="容器化技术"><a href="#容器化技术" class="header-anchor">#</a> 容器化技术</h4> <p>==容器化技术不是模拟的一个完整的操作系统==<img src="https://raw.githubusercontent.com/FamousMai/images/master/imgs/202301171828671.png" alt="image-20230117124052734"></p> <p>比较Docker 和 虚拟机技术的不同</p> <ul><li>传统虚拟机，虚拟出一条硬件，运行一个完整的操作系统，然后在这个系统上安装和运行软件</li> <li>容器内的应用直接运行在 宿主机的内容，容器是没有自己的内核的，也没有虚拟我们的意见，所以就轻便了</li> <li>每个容器间是互相隔离，每个容器内都有一个属于自己的文件系统，互不影响</li></ul> <h4 id="devops-开发、运维"><a href="#devops-开发、运维" class="header-anchor">#</a> DevOps（开发、运维）</h4> <p><strong>应用更快速的交付和部署</strong></p> <p>传统：一堆帮助文档，安装程序</p> <p>Dokcer：打包镜像发布测试，一键运行</p> <p><strong>更便捷的升级和阔所容</strong></p> <p>使用了Docker之后，我们部署应用就和搭积木一样！</p> <p>项目打包为一个镜像，扩展 服务器A！服务器B</p> <p><strong>更简单的系统运维</strong></p> <p>在容器化之后，我们的开发，测试环境都是高度一致的</p> <p><strong>更高效的计算资源利用</strong></p> <p>Docker是 内核级别的虚拟话，可以在一个物理机上可以运行很多的容器实例！服务器的性能可以被压榨到极致</p> <h2 id="docker安装"><a href="#docker安装" class="header-anchor">#</a> Docker安装</h2> <h3 id="docker-的基本组成"><a href="#docker-的基本组成" class="header-anchor">#</a> docker 的基本组成</h3> <p><img src="https://i.loli.net/2020/12/15/V4S3yiDK6PCGtbd.png" alt="img"></p> <p><strong>镜像（image）</strong></p> <p>就好比是一个模版，可以通过这么模板来创建容器服务，tomcat镜像 ===&gt; run ==&gt; tomcat01容器（提供服务器）</p> <p>通过这个镜像可以创建多个容器（最终服务运行或者项目运行就是在容器中的）。</p> <p><strong>容器（container）</strong></p> <p>Docker利用容器技术，独立运行一个或者一个组应用，通过镜像来创建的。</p> <p>启动，停止，删除，基本命令！</p> <p>目前就可以把这个容器理解为一个简易的linux系统</p> <p><strong>仓库（repository）</strong></p> <p>仓库就是存放镜像的地方！</p> <p>仓库分为公有仓库和私有仓库！</p> <p>Docker Hub（默认是国外的）</p> <p>阿里云... 都有容器服务（配置镜像加速！）</p> <h3 id="安装docker"><a href="#安装docker" class="header-anchor">#</a> 安装Docker</h3> <h4 id="环境准备"><a href="#环境准备" class="header-anchor">#</a> 环境准备</h4> <ol><li>需要会一点点的linux基础</li> <li>Centos 7</li> <li>我们使用xshell连接远程服务器进行操作！</li></ol> <h4 id="环境查看"><a href="#环境查看" class="header-anchor">#</a> 环境查看</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 系统内核是3.10以上的</span>
+<span class="token punctuation">[</span>root@iZwz954642t91dbe6lc2l1Z ~<span class="token punctuation">]</span><span class="token comment"># uname -r</span>
+<span class="token number">3.10</span>.0-1127.19.1.el7.x86_64
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 系统版本</span>
+<span class="token punctuation">[</span>root@iZwz954642t91dbe6lc2l1Z ~<span class="token punctuation">]</span><span class="token comment"># cat /etc/os-release </span>
+<span class="token assign-left variable">NAME</span><span class="token operator">=</span><span class="token string">&quot;CentOS Linux&quot;</span>
+<span class="token assign-left variable">VERSION</span><span class="token operator">=</span><span class="token string">&quot;7 (Core)&quot;</span>
+<span class="token assign-left variable">ID</span><span class="token operator">=</span><span class="token string">&quot;centos&quot;</span>
+<span class="token assign-left variable">ID_LIKE</span><span class="token operator">=</span><span class="token string">&quot;rhel fedora&quot;</span>
+<span class="token assign-left variable">VERSION_ID</span><span class="token operator">=</span><span class="token string">&quot;7&quot;</span>
+<span class="token assign-left variable">PRETTY_NAME</span><span class="token operator">=</span><span class="token string">&quot;CentOS Linux 7 (Core)&quot;</span>
+<span class="token assign-left variable">ANSI_COLOR</span><span class="token operator">=</span><span class="token string">&quot;0;31&quot;</span>
+<span class="token assign-left variable">CPE_NAME</span><span class="token operator">=</span><span class="token string">&quot;cpe:/o:centos:centos:7&quot;</span>
+<span class="token assign-left variable">HOME_URL</span><span class="token operator">=</span><span class="token string">&quot;https://www.centos.org/&quot;</span>
+<span class="token assign-left variable">BUG_REPORT_URL</span><span class="token operator">=</span><span class="token string">&quot;https://bugs.centos.org/&quot;</span>
+
+<span class="token assign-left variable">CENTOS_MANTISBT_PROJECT</span><span class="token operator">=</span><span class="token string">&quot;CentOS-7&quot;</span>
+<span class="token assign-left variable">CENTOS_MANTISBT_PROJECT_VERSION</span><span class="token operator">=</span><span class="token string">&quot;7&quot;</span>
+<span class="token assign-left variable">REDHAT_SUPPORT_PRODUCT</span><span class="token operator">=</span><span class="token string">&quot;centos&quot;</span>
+<span class="token assign-left variable">REDHAT_SUPPORT_PRODUCT_VERSION</span><span class="token operator">=</span><span class="token string">&quot;7&quot;</span>
+</code></pre></div><h4 id="安装-centos"><a href="#安装-centos" class="header-anchor">#</a> 安装（centos）</h4> <p><strong>参考链接</strong></p> <p>https://developer.aliyun.com/mirror/docker-ce?spm=a2c6h.13651102.0.0.55e01b110vCziG</p> <p>https://juejin.cn/post/7189159542918217789</p> <p><strong>帮助文档</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 1. 卸载旧版本</span>
+yum remove <span class="token function">docker</span> docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+已加载插件：fastestmirror
+参数 <span class="token function">docker</span> 没有匹配
+参数 docker-client 没有匹配
+参数 docker-client-latest 没有匹配
+参数 docker-common 没有匹配
+参数 docker-latest 没有匹配
+参数 docker-latest-logrotate 没有匹配
+参数 docker-logrotate 没有匹配
+参数 docker-engine 没有匹配
+
+<span class="token comment"># 2. 需要的安装包</span>
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> yum-utils
+
+<span class="token comment"># 3. 设置镜像的仓库</span>
+yum-config-manager <span class="token punctuation">\</span>
+	--add-repo <span class="token punctuation">\</span>
+	https://download.docker.com/linux/centos/docker-ce.repo <span class="token comment"># 默认是国外的</span>
+	
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo <span class="token comment"># 阿里云加速，十分地快</span>
+
+<span class="token comment"># 更新yum软件包索引</span>
+yum makecache fast
+
+<span class="token comment"># 4. 安装docker docker-ce社区版 ee是企业版</span>
+yum <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+
+<span class="token comment"># 5. 启动docker</span>
+systemctl start <span class="token function">docker</span>
+<span class="token function">service</span> <span class="token function">docker</span> start
+
+<span class="token comment"># 6. docker version 检查是否成功</span>
+<span class="token punctuation">[</span>root@iZwz954642t91dbe6lc2l1Z ~<span class="token punctuation">]</span><span class="token comment"># docker version</span>
+Client: Docker Engine - Community
+ Version:           <span class="token number">20.10</span>.22
+ API version:       <span class="token number">1.41</span>
+ Go version:        go1.18.9
+ Git commit:        3a2c30b
+ Built:             Thu Dec <span class="token number">15</span> <span class="token number">22</span>:30:24 <span class="token number">2022</span>
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      <span class="token boolean">true</span>
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          <span class="token number">20.10</span>.22
+  API version:      <span class="token number">1.41</span> <span class="token punctuation">(</span>minimum version <span class="token number">1.12</span><span class="token punctuation">)</span>
+  Go version:       go1.18.9
+  Git commit:       42c8b31
+  Built:            Thu Dec <span class="token number">15</span> <span class="token number">22</span>:28:33 <span class="token number">2022</span>
+  OS/Arch:          linux/amd64
+  Experimental:     <span class="token boolean">false</span>
+ containerd:
+  Version:          <span class="token number">1.6</span>.15
+  GitCommit:        5b842e528e99d4d4c1686467debf2bd4b88ecd86
+ runc:
+  Version:          <span class="token number">1.1</span>.4
+  GitCommit:        v1.1.4-0-g5fd4c4d
+ docker-init:
+  Version:          <span class="token number">0.19</span>.0
+  GitCommit:        de40ad0
+
+<span class="token comment"># 7. hello world</span>
+<span class="token punctuation">[</span>root@iZwz954642t91dbe6lc2l1Z ~<span class="token punctuation">]</span><span class="token comment"># docker run hello-world</span>
+Unable to <span class="token function">find</span> image <span class="token string">'hello-world:latest'</span> locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete 
+Digest: sha256:aa0cc8055b82dc2509bed2e19b275c8f463506616377219d9642221ab53cf9fe
+Status: Downloaded newer image <span class="token keyword">for</span> hello-world:latest
+
+Hello from Docker<span class="token operator">!</span>
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ <span class="token number">1</span>. The Docker client contacted the Docker daemon.
+ <span class="token number">2</span>. The Docker daemon pulled the <span class="token string">&quot;hello-world&quot;</span> image from the Docker Hub.
+    <span class="token punctuation">(</span>amd64<span class="token punctuation">)</span>
+ <span class="token number">3</span>. The Docker daemon created a new container from that image <span class="token function">which</span> runs the
+    executable that produces the output you are currently reading.
+ <span class="token number">4</span>. The Docker daemon streamed that output to the Docker client, <span class="token function">which</span> sent it
+    to your terminal.
+
+To try something <span class="token function">more</span> ambitious, you can run an Ubuntu container with:
+ $ <span class="token function">docker</span> run <span class="token parameter variable">-it</span> ubuntu <span class="token function">bash</span>
+
+Share images, automate workflows, and <span class="token function">more</span> with a <span class="token function">free</span> Docker ID:
+ https://hub.docker.com/
+
+For <span class="token function">more</span> examples and ideas, visit:
+ https://docs.docker.com/get-started/
+ 
+ <span class="token comment"># 8. 查看一下下载的这个 hello-world镜像</span>
+ <span class="token punctuation">[</span>root@iZwz954642t91dbe6lc2l1Z ~<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+hello-world   latest    feb5d9fea6a5   <span class="token number">16</span> months ago   <span class="token number">13</span>.3kB
+ 
+</code></pre></div><p><strong>了解：卸载docker</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 1. 卸载依赖</span>
+yum remove docker-ce docker-ce-cli containerd.io
+
+<span class="token comment"># 2. 删除资源</span>
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> /var/lib/docker
+
+<span class="token comment"># /var/lib/docker docker的默认工作路径！</span>
+</code></pre></div><h3 id="阿里云镜像加速"><a href="#阿里云镜像加速" class="header-anchor">#</a> 阿里云镜像加速</h3> <ol><li><p>登录阿里云</p></li> <li><p>找到镜像加速地址</p> <p>![image-20230117150149564](/Users/mym/Library/Application Support/typora-user-images/image-20230117150149564.png)</p></li> <li><p>配置使用</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /etc/docker
+<span class="token function">sudo</span> <span class="token function">tee</span> /etc/docker/daemon.json <span class="token operator">&lt;&lt;-</span><span class="token string">'EOF'
+{
+  &quot;registry-mirrors&quot;: [&quot;https://9lxn3itv.mirror.aliyuncs.com&quot;]
+}
+EOF</span>
+<span class="token function">sudo</span> systemctl daemon-reload
+<span class="token function">sudo</span> systemctl restart <span class="token function">docker</span>
+</code></pre></div></li></ol> <h3 id="回顾helloworld过程"><a href="#回顾helloworld过程" class="header-anchor">#</a> 回顾helloworld过程</h3> <p>![image-20230117150603100](/Users/mym/Library/Application Support/typora-user-images/image-20230117150603100.png)</p> <p>![image-20230117150758667](/Users/mym/Library/Application Support/typora-user-images/image-20230117150758667.png)</p> <h3 id="底层原理"><a href="#底层原理" class="header-anchor">#</a> 底层原理</h3> <p><strong>Docker是怎么工作的？</strong></p> <p>Docker是一个  Client - Server 结构的系统，Docker的守护进程运行在主机上。通过Socket从客户端访问！</p> <p>DockerServer接收到 Docker-Client的指令，就会执行这个命令。</p> <p>![image-20230117151816826](/Users/mym/Library/Application Support/typora-user-images/image-20230117151816826.png)</p> <p><strong>Docker为什么比VM快？</strong></p> <ol><li>Docker有着比虚拟机更少的抽象层</li> <li>Docker利用的宿主机的内核，VM需要是 Guest OS</li></ol> <p><img src="https://img-blog.csdnimg.cn/20210202112125801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2phdGVq,size_16,color_FFFFFF,t_70" alt="img"></p> <p><img src="https://img-blog.csdnimg.cn/img_convert/91868a37481f41dbc2b53a2303ce8fff.png" alt="img"></p> <p>所以说，新建一个容器的时候，docker不需要像虚拟机一样重新加载一个操作系统内核，避免引导性操作，虚拟机是加载Guest OS，分钟级别的，而docker是利用宿主机的操作系统，省略了这个复杂的过程，秒级</p> <p><img src="https://www.jb51.cc/res/2021/06-16/14/86eea9fd88f9b85220340f56cabcf6ac.png" alt="img"></p> <p>之后学习完毕所有的命令， 再回头来看这段理论，就会很清晰！</p> <h2 id="docker的常用命令"><a href="#docker的常用命令" class="header-anchor">#</a> Docker的常用命令</h2> <h3 id="帮助命令"><a href="#帮助命令" class="header-anchor">#</a> 帮助命令</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> version 		<span class="token comment"># 显示docker的版本信息</span>
+<span class="token function">docker</span> info    		<span class="token comment"># 显示更详细信息</span>
+<span class="token function">docker</span> 命令 <span class="token parameter variable">--help</span> <span class="token comment"># 万能命令</span>
+</code></pre></div><p>帮助文档的地址：https://docs.docker.com/engine/reference/commandline/docker/</p> <h3 id="镜像命令"><a href="#镜像命令" class="header-anchor">#</a> 镜像命令</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@iZwz954642t91dbe6lc2l1Z ~<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+hello-world   latest    feb5d9fea6a5   <span class="token number">16</span> months ago   <span class="token number">13</span>.3kB
+
+
+<span class="token comment"># 解释</span>
+REPOSITORY 镜像的仓库源
+TAG        镜像的标签
+IMAGE ID   镜像的ID
+CREATED    镜像的创建时间
+SIZE       镜像的大小
+
+
+</code></pre></div><h3 id="容器命令"><a href="#容器命令" class="header-anchor">#</a> 容器命令</h3> <h3 id="操作命令"><a href="#操作命令" class="header-anchor">#</a> 操作命令</h3> <h2 id="docker镜像"><a href="#docker镜像" class="header-anchor">#</a> Docker镜像</h2> <h2 id="容器数据卷"><a href="#容器数据卷" class="header-anchor">#</a> 容器数据卷</h2> <h2 id="dockerfile"><a href="#dockerfile" class="header-anchor">#</a> Dockerfile</h2> <h2 id="docker网络原理"><a href="#docker网络原理" class="header-anchor">#</a> Docker网络原理</h2> <h2 id="idea整合docker"><a href="#idea整合docker" class="header-anchor">#</a> IDEA整合Docker</h2> <h2 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> Docker Compose</h2> <h2 id="docker-swarm"><a href="#docker-swarm" class="header-anchor">#</a> Docker Swarm</h2> <h2 id="ci-cd-jenkins"><a href="#ci-cd-jenkins" class="header-anchor">#</a> CI\CD Jenkins</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">1/17/2023, 12:21:35 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/code/mac.html" class="prev">
+        Mac常见问题处理
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ab260301.js" defer></script><script src="/assets/js/2.6430ac10.js" defer></script><script src="/assets/js/11.1c9d0aac.js" defer></script>
+  </body>
+</html>
