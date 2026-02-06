@@ -1,0 +1,17 @@
+<svg width="420" height="260" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="50%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="400" height="240" rx="28" fill="#0F172A" stroke="url(#grad)" stroke-width="3" />
+  <circle cx="110" cy="90" r="38" fill="url(#grad)" opacity="0.9" />
+  <rect x="170" y="60" width="210" height="22" rx="11" fill="#22D3EE" opacity="0.7" />
+  <rect x="170" y="100" width="180" height="18" rx="9" fill="#7C3AED" opacity="0.7" />
+  <rect x="170" y="136" width="140" height="16" rx="8" fill="#F97316" opacity="0.7" />
+  <path d="M70 170 C120 150, 160 190, 210 175" stroke="#22D3EE" stroke-width="4" stroke-linecap="round" />
+  <path d="M230 178 C270 160, 310 200, 350 184" stroke="#F97316" stroke-width="4" stroke-linecap="round" />
+  <text x="44" y="218" fill="#E2E8F0" font-size="20" font-family="'Inter', sans-serif">Basketball · Code · Journal · AI</text>
+</svg>
