@@ -3,8 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#04060c" />
     <title>欢迎来到 Famousmai 的 AI世界</title>
     <style>
+      :root {
+        --bg: #04060c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       html,
       body {
         height: 100%;
@@ -12,12 +21,33 @@
       }
 
       body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        place-items: center;
         min-height: 100vh;
-        background: #fff;
-        color: #111;
+        overflow: hidden;
+        color-scheme: dark;
+        color: #eefcff;
+        background-color: var(--bg);
+        background-image:
+          radial-gradient(1.5px 1.5px at 12% 18%, rgba(110, 231, 255, 0.35), transparent),
+          radial-gradient(1px 1px at 78% 14%, rgba(139, 124, 255, 0.4), transparent),
+          radial-gradient(1.5px 1.5px at 88% 42%, rgba(110, 231, 255, 0.28), transparent),
+          radial-gradient(1px 1px at 22% 72%, rgba(139, 124, 255, 0.28), transparent),
+          radial-gradient(1px 1px at 64% 8%, rgba(255, 255, 255, 0.35), transparent),
+          linear-gradient(rgba(110, 231, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(110, 231, 255, 0.035) 1px, transparent 1px),
+          radial-gradient(ellipse 72% 48% at 50% 42%, rgba(110, 231, 255, 0.16), transparent 62%),
+          radial-gradient(ellipse 60% 40% at 50% 100%, rgba(139, 124, 255, 0.16), transparent 58%);
+        background-size:
+          auto,
+          auto,
+          auto,
+          auto,
+          auto,
+          64px 64px,
+          64px 64px,
+          auto,
+          auto;
         font-family:
           "PingFang SC",
           "Hiragino Sans GB",
@@ -25,16 +55,109 @@
           "Microsoft YaHei",
           system-ui,
           sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        left: -10%;
+        right: -10%;
+        bottom: -8%;
+        height: 54vh;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(110, 231, 255, 0.18) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(110, 231, 255, 0.18) 1px, transparent 1px);
+        background-size: 52px 52px;
+        transform: perspective(340px) rotateX(58deg);
+        transform-origin: center bottom;
+        mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 82%);
+        -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 82%);
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0 2px,
+            rgba(4, 6, 12, 0.18) 2px 3px
+          ),
+          radial-gradient(ellipse at center, transparent 38%, rgba(0, 0, 0, 0.5) 100%);
       }
 
       h1 {
+        position: relative;
+        z-index: 1;
         margin: 0;
         padding: 1.5rem;
-        font-size: clamp(1.75rem, 5vw, 3.25rem);
+        max-width: 92vw;
+        font-size: clamp(1.05rem, 4.2vw + 0.45rem, 3.1rem);
         font-weight: 500;
-        line-height: 1.4;
-        letter-spacing: 0.06em;
+        line-height: 1.45;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
         text-align: center;
+        color: #f4feff;
+        text-shadow:
+          0 0 8px rgba(110, 231, 255, 0.75),
+          0 0 24px rgba(110, 231, 255, 0.4),
+          0 0 64px rgba(110, 231, 255, 0.22),
+          0 0 110px rgba(139, 124, 255, 0.2);
+        animation: glow 5.5s ease-in-out infinite;
+      }
+
+      h1::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        width: min(46rem, 90vw);
+        height: 1px;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(110, 231, 255, 0.15) 18%,
+          rgba(110, 231, 255, 0.7) 50%,
+          rgba(139, 124, 255, 0.35) 62%,
+          transparent 100%
+        );
+        box-shadow: 0 0 16px rgba(110, 231, 255, 0.45);
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          text-shadow:
+            0 0 8px rgba(110, 231, 255, 0.55),
+            0 0 22px rgba(110, 231, 255, 0.28),
+            0 0 56px rgba(110, 231, 255, 0.14);
+        }
+        50% {
+          text-shadow:
+            0 0 12px rgba(110, 231, 255, 0.9),
+            0 0 36px rgba(110, 231, 255, 0.48),
+            0 0 84px rgba(139, 124, 255, 0.3);
+        }
+      }
+
+      @media (max-width: 700px) {
+        h1 {
+          letter-spacing: 0.04em;
+          padding: 1rem 0.75rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        h1 {
+          animation: none;
+        }
       }
     </style>
   </head>
